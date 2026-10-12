@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>4-Bedroom Family Home with Studio, Farrarmere | Deacon La Grange, RE/MAX Dazzle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Official RE/MAX brand colors — see REMAX Color Palette reference */
+    --red:#ff1200;        /* REMAX Primary Red */
+    --red-bridge:#aa1120; /* Bridge Red */
+    --red-dark:#660000;   /* Dark Red */
+    --blue:#0043ff;       /* REMAX Primary Blue */
+    --blue-bridge:#0c2749;/* Bridge Blue */
+    --blue-dark:#000e35;  /* Dark Blue */
+    --sky:#a3d4f2;        /* Sky Blue */
+    --cream:#f7f5ee;      /* Cream */
+    --charcoal:#232323;   /* Dark Charcoal Gray */
+    --black:#000000;
+    --white:#ffffff;
+    --whatsapp:#25d366;
+    --line:#e2ddcd;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--charcoal);
+    font-family:'Montserrat',system-ui,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  button{font-family:inherit;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+
+  /* ---------- brand gradient bars (Primary/Bridge/Dark, per REMAX gradation guidance) ---------- */
+  .bar-red{height:5px;background:linear-gradient(90deg,var(--red-dark),var(--red-bridge) 45%,var(--red) 100%);}
+  .bar-blue{height:5px;background:linear-gradient(90deg,var(--blue-dark),var(--blue-bridge) 45%,var(--blue) 100%);}
+
+  /* ---------- topbar (light, so the true-colour logo reads correctly) ---------- */
+  .topbar{
+    background:var(--white);
+    border-bottom:1px solid var(--line);
+    padding:13px 0;
+  }
+  .topbar .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .topbar-logo{height:44px;width:auto;}
+  .topbar-contact{
+    font-size:13.5px;
+    font-weight:500;
+    letter-spacing:.01em;
+    color:var(--charcoal);
+  }
+  .topbar-contact strong{color:var(--blue-dark);font-weight:700;}
+  .topbar-contact a{text-decoration:none;color:var(--blue-dark);}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    min-height:78vh;
+    display:flex;
+    align-items:flex-end;
+    background:#111 center/cover no-repeat;
+  }
+  .hero-shade{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(0,14,53,0) 35%, rgba(0,14,53,.6) 72%, rgba(0,14,53,.92) 100%);
+  }
+  .hero-inner{
+    position:relative;
+    width:100%;
+    padding:0 28px 44px;
+    max-width:1180px;
+    margin:0 auto;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:24px;
+    flex-wrap:wrap;
+  }
+  .hero-text h1{
+    font-family:'Montserrat',sans-serif;
+    font-weight:800;
+    font-size:clamp(28px,4.2vw,48px);
+    line-height:1.08;
+    color:var(--white);
+    margin:0 0 10px;
+    max-width:15ch;
+    letter-spacing:-.01em;
+  }
+  .hero-text p{
+    margin:0;
+    color:#dfe3ea;
+    font-size:16.5px;
+    font-weight:500;
+    letter-spacing:.01em;
+  }
+  .price-tag{
+    flex-shrink:0;
+    background:var(--red);
+    color:var(--white);
+    padding:14px 22px;
+    text-align:right;
+  }
+  .price-tag .amount{
+    display:block;
+    font-family:'Montserrat',sans-serif;
+    font-weight:800;
+    font-size:26px;
+    letter-spacing:-.01em;
+  }
+  .price-tag .label{
+    display:block;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.1em;
+    margin-top:2px;
+    color:#ffd9d1;
+  }
+
+  /* ---------- stat strip ---------- */
+  .stats{
+    background:var(--blue-dark);
+    color:var(--cream);
+  }
+  .stats .wrap{
+    display:flex;
+    flex-wrap:wrap;
+    padding:0;
+  }
+  .stat{
+    flex:1 1 140px;
+    padding:20px 24px;
+    border-right:1px solid rgba(255,255,255,.16);
+    text-align:center;
+  }
+  .stat:last-child{border-right:none;}
+  .stat .num{
+    display:block;
+    font-family:'Montserrat',sans-serif;
+    font-weight:800;
+    font-size:25px;
+    letter-spacing:-.01em;
+  }
+  .stat .lbl{
+    display:block;
+    font-size:11.5px;
+    font-weight:600;
+    color:#aebbd2;
+    margin-top:2px;
+    letter-spacing:.04em;
+  }
+
+  /* ---------- about ---------- */
+  .about{
+    padding:60px 0 52px;
+    border-bottom:1px solid var(--line);
+  }
+  .about .wrap{
+    display:flex;
+    gap:56px;
+    flex-wrap:wrap;
+  }
+  .about-body{flex:1 1 480px;max-width:620px;}
+  .about-body .kicker{
+    font-family:'Montserrat',sans-serif;
+    font-weight:700;
+    font-size:20px;
+    color:var(--blue-dark);
+    margin:0 0 16px;
+    line-height:1.35;
+  }
+  .about-body p{
+    margin:0 0 16px;
+    color:var(--charcoal);
+    opacity:.85;
+    font-size:15.5px;
+  }
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;}
+  .tag{
+    background:var(--sky);
+    color:var(--blue-dark);
+    font-size:12.5px;
+    font-weight:700;
+    padding:6px 12px;
+    letter-spacing:.02em;
+  }
+  .about-side{
+    flex:0 0 260px;
+    border-left:3px solid var(--red);
+    padding:4px 0 4px 22px;
+    align-self:flex-start;
+  }
+  .about-side .note-label{
+    display:block;
+    font-size:12px;
+    letter-spacing:.05em;
+    color:var(--red);
+    margin-bottom:6px;
+    font-weight:700;
+  }
+  .about-side p{
+    margin:0;
+    font-size:14.5px;
+    color:var(--charcoal);
+    opacity:.85;
+    line-height:1.55;
+  }
+
+  /* ---------- section divider bar (echoes brand toolkit's section headers) ---------- */
+  .section-bar{
+    background:var(--black);
+    color:var(--white);
+    text-align:center;
+    padding:11px 0;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+  }
+
+  /* ---------- gallery: horizontal scroll, click-to-enlarge ---------- */
+  .gallery-hint{
+    padding:14px 28px 10px;
+    font-size:13px;
+    font-weight:500;
+    color:var(--charcoal);
+    opacity:.65;
+  }
+  .gallery-scroll{
+    display:flex;
+    gap:6px;
+    overflow-x:auto;
+    padding:0 28px 22px;
+    scroll-snap-type:x proximity;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .gallery-scroll::-webkit-scrollbar{display:none;}
+  .gthumb{
+    flex:0 0 auto;
+    width:min(66vw,320px);
+    aspect-ratio:4/3;
+    margin:0;
+    overflow:hidden;
+    scroll-snap-align:start;
+    cursor:pointer;
+    position:relative;
+  }
+  .gthumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease;}
+  .gthumb:hover img{transform:scale(1.04);}
+  .gthumb .gnum{
+    position:absolute;bottom:8px;right:8px;
+    background:rgba(0,14,53,.72);
+    color:var(--white);
+    font-size:11px;font-weight:700;
+    padding:3px 7px;
+    letter-spacing:.02em;
+  }
+
+  /* ---------- lightbox ---------- */
+  .lightbox{
+    position:fixed;inset:0;
+    background:rgba(0,8,26,.95);
+    display:flex;align-items:center;justify-content:center;
+    z-index:999;
+    opacity:0;visibility:hidden;
+    transition:opacity .2s ease;
+  }
+  .lightbox.open{opacity:1;visibility:visible;}
+  .lb-img{
+    max-width:90vw;max-height:80vh;
+    object-fit:contain;
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+  }
+  .lb-close{
+    position:absolute;top:18px;right:20px;
+    background:rgba(255,255,255,.12);
+    color:var(--white);
+    border:none;
+    width:42px;height:42px;
+    font-size:24px;line-height:1;
+    cursor:pointer;
+  }
+  .lb-nav{
+    position:absolute;top:50%;transform:translateY(-50%);
+    background:rgba(255,255,255,.12);
+    color:var(--white);
+    border:none;
+    width:48px;height:48px;
+    font-size:28px;line-height:1;
+    cursor:pointer;
+  }
+  .lb-prev{left:14px;}
+  .lb-next{right:14px;}
+  .lb-nav:hover, .lb-close:hover{background:rgba(255,255,255,.24);}
+  .lb-counter{
+    position:absolute;bottom:22px;left:50%;transform:translateX(-50%);
+    background:rgba(255,255,255,.12);
+    color:var(--white);
+    font-size:12.5px;font-weight:600;
+    padding:6px 14px;
+    letter-spacing:.03em;
+  }
+  @media (max-width:600px){
+    .lb-nav{width:40px;height:40px;font-size:22px;}
+    .lb-close{width:38px;height:38px;font-size:20px;}
+  }
+
+  /* ---------- features ---------- */
+  .features{
+    padding:52px 0 56px;
+    border-bottom:1px solid var(--line);
+  }
+  .features .wrap{display:flex;gap:56px;flex-wrap:wrap;}
+  .feat-col{flex:1 1 300px;}
+  .feat-col ul{list-style:none;margin:0;padding:0;}
+  .feat-col li{
+    padding:10px 0;
+    border-bottom:1px solid var(--line);
+    font-size:15px;
+    color:var(--charcoal);
+    display:flex;
+    gap:10px;
+  }
+  .feat-col li:first-child{padding-top:0;}
+  .feat-col li::before{
+    content:"—";
+    color:var(--red);
+    font-weight:700;
+    flex-shrink:0;
+  }
+  .levies-note{
+    margin-top:20px;
+    font-size:13.5px;
+    color:var(--charcoal);
+    opacity:.75;
+  }
+
+  /* ---------- agent block ---------- */
+  .agent{
+    background:var(--blue-dark);
+    color:#e9ecf2;
+    padding:0;
+  }
+  .agent .wrap{
+    display:flex;
+    align-items:stretch;
+    flex-wrap:wrap;
+    gap:0;
+  }
+  .agent-photo{
+    flex:0 0 260px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    padding-top:24px;
+  }
+  .agent-photo img{
+    max-height:340px;
+    width:auto;
+    margin:0 auto;
+  }
+  .agent-info{
+    flex:1 1 380px;
+    padding:50px 8px 50px 40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .agent-info .eyebrow{
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--sky);
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    margin:0 0 10px;
+  }
+  .agent-info h3{
+    font-family:'Montserrat',sans-serif;
+    font-weight:800;
+    font-size:28px;
+    margin:0 0 4px;
+    color:var(--white);
+    letter-spacing:-.01em;
+  }
+  .agent-info .role{
+    margin:0 0 22px;
+    color:#c9d2e0;
+    font-size:14.5px;
+    font-weight:500;
+  }
+  .agent-contact-lines{
+    margin:0 0 26px;
+    font-size:15px;
+    font-weight:500;
+    color:#dfe3e9;
+  }
+  .agent-contact-lines div{margin-bottom:6px;}
+  .agent-contact-lines a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.28);}
+  .agent-btns{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:13px 22px;
+    font-size:14px;
+    font-weight:700;
+    text-decoration:none;
+    letter-spacing:.02em;
+  }
+  .btn-whatsapp{background:var(--whatsapp);color:#08290f;}
+  .btn-call{background:var(--red);color:var(--white);}
+
+  /* whole panel sits on cream so the logo/badge true colours always read */
+  .agent-brand{
+    flex:0 0 220px;
+    background:var(--cream);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    padding:32px 24px;
+  }
+  .agent-brand img.wordmark{width:152px;}
+  .agent-brand img.badge{width:74px;}
+
+  /* ---------- footer ---------- */
+  footer{
+    padding:24px 0 30px;
+    background:var(--cream);
+  }
+  footer .wrap{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+    font-size:11.5px;
+    font-weight:500;
+    color:#8a8779;
+  }
+
+  @media (max-width:760px){
+    .hero{min-height:64vh;}
+    .hero-inner{flex-direction:column;align-items:flex-start;}
+    .price-tag{text-align:left;}
+    .about .wrap{gap:32px;}
+    .about-side{border-left:none;border-top:3px solid var(--red);padding:14px 0 0;}
+    .agent .wrap{flex-direction:column;}
+    .agent-photo{padding-top:36px;flex:0 0 auto;}
+    .agent-info{padding:28px 24px 36px;}
+    .agent-brand{
+      flex-direction:row;
+      align-items:center;
+      justify-content:space-between;
+      padding:22px 24px;
+    }
+  }
+  .all-link{font-weight:700;}
+</style>
+</head>
+<body>
+
+<div class="bar-red"></div>
+<div class="topbar">
+  <div class="wrap">
+    <img class="topbar-logo" src="../assets/remax-dazzle-logo.png" alt="RE/MAX Dazzle">
+    <div class="topbar-contact"><a class="all-link" href="../index.html">&larr; All listings</a> &nbsp;|&nbsp; Presented by <strong>Deacon La Grange</strong> &nbsp;·&nbsp; <a href="tel:+27823750624">082 375 0624</a></div>
+  </div>
+</div>
+
+<section class="hero" style="background-image:url('img/hero.jpg');">
+  <div class="hero-shade"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>A renovated family entertainer with a studio, pool and stunning garden</h1>
+      <p>4-Bedroom House &nbsp;·&nbsp; Farrarmere, Benoni</p>
+    </div>
+    <div class="price-tag">
+      <span class="amount">R 2,850,000</span>
+      <span class="label">ASKING PRICE</span>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><span class="num">4</span><span class="lbl">Bedrooms</span></div>
+    <div class="stat"><span class="num">2.5</span><span class="lbl">Bathrooms</span></div>
+    <div class="stat"><span class="num">2</span><span class="lbl">Garages</span></div>
+    <div class="stat"><span class="num">330 m²</span><span class="lbl">Floor size</span></div>
+    <div class="stat"><span class="num">1,167 m²</span><span class="lbl">Erf size</span></div>
+  </div>
+</div>
+
+<section class="about">
+  <div class="wrap">
+    <div class="about-body">
+      <p class="kicker">Fully renovated, made for family life and entertaining.</p>
+      <p>This low-maintenance face-brick home in Farrarmere offers open-plan living, a large dining room, a private study and a built-in bar area, with a kitchen and separate laundry room. The main bedroom has its own en-suite bathroom.</p>
+      <p>Outside you'll find a swimming pool, a large entertainment area and a manicured garden, all totally walled. A separate studio suits a home business, gym or hobby room, and there are domestic quarters and a double garage. A rental solar system with battery backup helps keep the lights on, and security includes an electric gate, alarm system and 24-hour response.</p>
+      <div class="tags">
+        <span class="tag">Swimming Pool</span>
+        <span class="tag">Studio</span>
+        <span class="tag">Solar &amp; Battery Backup</span>
+        <span class="tag">Pet Friendly</span>
+      </div>
+    </div>
+    <div class="about-side">
+      <span class="note-label">Good to know</span>
+      <p>The solar system is rented. Ask me for the details and what it means for your monthly costs.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-bar">The Home</div>
+<p class="gallery-hint wrap">32 photos — tap any photo to view, swipe or use the arrows to browse</p>
+<div class="gallery-scroll" id="galleryScroll">
+  <figure class="gthumb"><img src="img/photo-01.jpg" alt="Property photo 1" loading="lazy"><span class="gnum">1/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-02.jpg" alt="Property photo 2" loading="lazy"><span class="gnum">2/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-03.jpg" alt="Property photo 3" loading="lazy"><span class="gnum">3/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-04.jpg" alt="Property photo 4" loading="lazy"><span class="gnum">4/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-05.jpg" alt="Property photo 5" loading="lazy"><span class="gnum">5/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-06.jpg" alt="Property photo 6" loading="lazy"><span class="gnum">6/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-07.jpg" alt="Property photo 7" loading="lazy"><span class="gnum">7/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-08.jpg" alt="Property photo 8" loading="lazy"><span class="gnum">8/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-09.jpg" alt="Property photo 9" loading="lazy"><span class="gnum">9/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-10.jpg" alt="Property photo 10" loading="lazy"><span class="gnum">10/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-11.jpg" alt="Property photo 11" loading="lazy"><span class="gnum">11/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-12.jpg" alt="Property photo 12" loading="lazy"><span class="gnum">12/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-13.jpg" alt="Property photo 13" loading="lazy"><span class="gnum">13/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-14.jpg" alt="Property photo 14" loading="lazy"><span class="gnum">14/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-15.jpg" alt="Property photo 15" loading="lazy"><span class="gnum">15/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-16.jpg" alt="Property photo 16" loading="lazy"><span class="gnum">16/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-17.jpg" alt="Property photo 17" loading="lazy"><span class="gnum">17/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-18.jpg" alt="Property photo 18" loading="lazy"><span class="gnum">18/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-19.jpg" alt="Property photo 19" loading="lazy"><span class="gnum">19/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-20.jpg" alt="Property photo 20" loading="lazy"><span class="gnum">20/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-21.jpg" alt="Property photo 21" loading="lazy"><span class="gnum">21/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-22.jpg" alt="Property photo 22" loading="lazy"><span class="gnum">22/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-23.jpg" alt="Property photo 23" loading="lazy"><span class="gnum">23/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-24.jpg" alt="Property photo 24" loading="lazy"><span class="gnum">24/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-25.jpg" alt="Property photo 25" loading="lazy"><span class="gnum">25/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-26.jpg" alt="Property photo 26" loading="lazy"><span class="gnum">26/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-27.jpg" alt="Property photo 27" loading="lazy"><span class="gnum">27/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-28.jpg" alt="Property photo 28" loading="lazy"><span class="gnum">28/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-29.jpg" alt="Property photo 29" loading="lazy"><span class="gnum">29/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-30.jpg" alt="Property photo 30" loading="lazy"><span class="gnum">30/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-31.jpg" alt="Property photo 31" loading="lazy"><span class="gnum">31/32</span></figure>
+  <figure class="gthumb"><img src="img/photo-32.jpg" alt="Property photo 32" loading="lazy"><span class="gnum">32/32</span></figure>
+</div>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous photo">&#8249;</button>
+  <img class="lb-img" id="lbImg" src="" alt="Property photo">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next photo">&#8250;</button>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<div class="section-bar">Property Details</div>
+<section class="features">
+  <div class="wrap">
+    <div class="feat-col">
+      <ul>
+        <li>4 Bedrooms, 2.5 bathrooms</li>
+        <li>Open-plan living and large dining room</li>
+        <li>Study and built-in bar</li>
+        <li>Kitchen and separate laundry room</li>
+        <li>Studio for business, gym or hobbies</li>
+        <li>Domestic quarters and storeroom</li>
+      </ul>
+    </div>
+    <div class="feat-col">
+      <ul>
+        <li>Double garage plus 2 parking bays</li>
+        <li>Swimming pool and entertainment area</li>
+        <li>Rental solar system with battery backup</li>
+        <li>Air conditioning, tiled floors, tile roof</li>
+        <li>Electric gate, alarm and 24-hour response</li>
+        <li>Pet friendly, totally walled</li>
+      </ul>
+      <p class="levies-note">Rates &amp; taxes: R 2,200 per month &middot; Floor size 330 m² &middot; Erf size 1,167 m².</p>
+    </div>
+  </div>
+</section>
+
+<div class="bar-blue"></div>
+<section class="agent">
+  <div class="wrap">
+    <div class="agent-photo">
+      <img src="../assets/deacon-la-grange.png" alt="Deacon La Grange">
+    </div>
+    <div class="agent-info">
+      <p class="eyebrow">Your point of contact for this home</p>
+      <h3>Deacon La Grange</h3>
+      <p class="role">Property Practitioner &middot; RE/MAX Dazzle, Benoni</p>
+      <div class="agent-contact-lines">
+        <div><a href="tel:+27823750624">082 375 0624</a></div>
+        <div><a href="mailto:deacon@remaxdazzle.co.za">deacon@remaxdazzle.co.za</a></div>
+      </div>
+      <div class="agent-btns">
+        <a class="btn btn-whatsapp" href="https://wa.me/27823750624?text=Hi%20Deacon%2C%20I'm%20interested%20in%20the%204-bedroom%20house%20in%20Farrarmere%20(R2%2C850%2C000).">WhatsApp Deacon</a>
+        <a class="btn btn-call" href="tel:+27823750624">Call 082 375 0624</a>
+      </div>
+    </div>
+    <div class="agent-brand">
+      <img class="wordmark" src="../assets/remax-dazzle-logo.png" alt="RE/MAX Dazzle">
+      <img class="badge" src="../assets/best-of-ekurhuleni-2025.png" alt="Best of Ekurhuleni 2025 Winner">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Marketed in cooperation with the mandated listing agency &middot; Listing ref. P24-117319719</span>
+    <span>Information deemed reliable, not guaranteed. E&amp;OE.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var thumbs = Array.prototype.slice.call(document.querySelectorAll('#galleryScroll .gthumb'));
+  var total = thumbs.length;
+  var current = 0;
+  var lightbox = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbCounter = document.getElementById('lbCounter');
+
+  function openAt(i){
+    current = (i + total) % total;
+    lbImg.src = thumbs[current].querySelector('img').src;
+    lbCounter.textContent = (current + 1) + ' / ' + total;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLb(){
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+  thumbs.forEach(function(t, i){
+    t.addEventListener('click', function(){ openAt(i); });
+  });
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  document.getElementById('lbPrev').addEventListener('click', function(e){ e.stopPropagation(); openAt(current - 1); });
+  document.getElementById('lbNext').addEventListener('click', function(e){ e.stopPropagation(); openAt(current + 1); });
+  lightbox.addEventListener('click', function(e){ if (e.target === lightbox) closeLb(); });
+  document.addEventListener('keydown', function(e){
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft') openAt(current - 1);
+    if (e.key === 'ArrowRight') openAt(current + 1);
+  });
+  var touchStartX = null;
+  lbImg.addEventListener('touchstart', function(e){ touchStartX = e.touches[0].clientX; });
+  lbImg.addEventListener('touchend', function(e){
+    if (touchStartX === null) return;
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) { dx < 0 ? openAt(current + 1) : openAt(current - 1); }
+    touchStartX = null;
+  });
+})();
+</script>
+
+</body>
+</html>
